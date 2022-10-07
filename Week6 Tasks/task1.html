@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+</head>
+<body>
+<div id="myApp">
+    <p>{{message}}</p>
+    <input type="text" placeholder="Please enter your name" v-model="name"  >
+    <h3> Username is {{name}}</h3>
+  
+    <input type="text" placeholder="Please enter your password" v-model="password">
+    <h3> Password is {{password}}</h3>
+
+    <input type="email" v-model="Email" placeholder="Please enter your email" pattern=".+@testwebsite\.com" size="30" required>
+    <h3>Your email is {{Email}}</h3>
+
+</div>
+
+<script>
+    var App1 = new Vue({
+        el:"#myApp",
+        data: {
+           message:"Nice to see you!",
+            name:"",
+            password:"",
+            Email:"",
+        }
+     })
+</script>
+</body>
+</html>

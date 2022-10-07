@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+</head>
+<body>
+    <div id="Button">
+     <prop-example name="BeefBurger" price="5dollars" description="Delicious" region="Melbourne"></prop-example >
+
+    </div>
+       
+  </body>
+  <script>
+    Vue.component("prop-example",{
+      data:function()  {
+        return{ "favorable":0, "negative":0}
+        
+      },
+      props:["name","price","description","region"],
+      template:'<div style="width:200px;height:230px;background-color:red;color:black;"><p>foodName:{{name}}</p><p>foodPrice:{{price}}</p><p>foodDescription:{{description}}</p><p>foodRegion:{{region}}</p><p><button v-on:click="favorable++">Likes:{{favorable}}</button></p><p><button v-on:click="negative++">Dislikes:{{negative}}</button></p></div>'
+    }
+     )
+
+     var menu = new Vue({
+      el:"#Button",
+      data:{}
+     })
+  </script>
+</html>

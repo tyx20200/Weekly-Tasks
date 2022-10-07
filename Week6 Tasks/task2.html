@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app"> 
+    <p>Please pick your hobby!</p>
+    <input type="checkbox" v-model="hobby2" id="swim" value="Swim">
+    <label for="swim">Swim</label>
+    <input type="checkbox" v-model="hobby2"id="basketball" value="Basketball">
+    <label for="basketball">Basketball</label>
+    <input type="checkbox" v-model="hobby2"id="videogame" value="Videogame">
+    <label for="videogame">Videogame</label>
+    <div>You have picked {{hobby2}}</div>
+ </div>
+  <script>
+    var A = new Vue({
+        el:"#app",
+        data: {
+            hobby2:[]
+        }
+    })
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+</head>
+<body>
+    <div id="MyFirstApp">
+     {{message}}
+     <h1>Here are your previous scores</h1>
+     <ul>
+        <li v-for = "marks in oldScores">
+            {{marks}}
+        </li>
+     </ul>
+     <h2 v-show = "OK">How about your this time's score?</h2>
+     <input type ="text" v-model="score">
+     
+     <div v-if = "score>=60">Good, you have passed!</div>
+     <div v-else>You are so bad!</div>
+    </div>
+
+    <script>
+        var App = new Vue({
+            el:"#MyFirstApp",
+            data:{
+                message:"Hello World!",
+                score:0,
+                OK:true,
+                oldScores:["50","70","60"]
+            }
+
+        });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.4/dist/vue.js"></script>
+</head>
+<body>
+  <div id="firstComponent">
+	
+  </div>
+  
+  <script type="text/javascript">
+    
+    const student = Vue.extend({
+      name:'student',
+      template:`
+        <div>
+          <h2>student name:{{name}}</h2>	
+          <h2>student age:{{age}}</h2>	
+        </div>
+      `,
+      data(){
+        return {
+          name:'Jack',
+          age:18
+        }
+      }
+    })
+    
+    //define school component
+    const school = Vue.extend({
+      name:'school',
+      template:`
+        <div>
+          <h2>school name:{{name}}</h2>	
+          <h2>school address:{{address}}</h2>	
+          <student></student>
+        </div>
+      `,
+      data(){
+        return {
+          name:'Deakin University',
+          address:'Melbourne'
+        }
+      },
+      //register component（local）
+      components:{
+        student
+      }
+    })
+  
+    //define Hello component
+    const Hello = Vue.extend({
+      template:`<h1>{{message}}</h1>`,
+      data(){
+        return {
+          message:'Welcome to Deakin!'
+        }
+      }
+    })
+    
+    //define app component
+    const app = Vue.extend({
+      template:`
+        <div>	
+          <Hello></Hello>
+          <school></school>
+        </div>
+      `,
+      components:{
+        school,
+        Hello
+      }
+    })
+  
+    //create vm
+    new Vue({
+      template:'<app></app>',
+      el:'#firstComponent',
+      //register component（local）
+      components:{app}
+    })
+  </script>
+  
+</body>
+</html>

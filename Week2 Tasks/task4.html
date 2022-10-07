@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <canvas id="drawCanvas" width="200px" height="150px" style="border:1px solid red"></canvas>
+    
+    <script>
+    var paper = document.getElementById("drawCanvas");
+    var ctx = paper.getContext("2d");
+    ctx.moveTo(0,75);
+    ctx.lineTo(200,75);
+    ctx.stroke();
+
+    </script>
+    
+    <audio src="https://www.youtube.com/watch?v=IorlpRfadZY" controls></audio>
+    <video src="https://www.youtube.com/watch?v=BnnbP7pCIvQ"  controls></video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9uOMectkCCs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+</body>
+</html>

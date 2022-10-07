@@ -1,0 +1,93 @@
+.Shower-icon1 { 
+    width: 100px;
+    height: 100px;
+    background-size:contain;
+    background-image:url("https://cdn-icons-png.flaticon.com/512/2470/2470014.png") ;
+    background-repeat: no-repeat;
+ }
+ .Shower-icon2 { 
+   width: 20px;
+   height: 20px;
+   background-size:contain;
+   background-image:url("https://cdn-icons-png.flaticon.com/512/2470/2470014.png") ;
+   background-repeat: no-repeat;
+
+
+}
+
+.Cloudy-icon { 
+    width: 20px;
+    height: 20px;
+    background-size:contain;
+    background-image:url(images/cloudy.png);
+    background-repeat: no-repeat;
+    
+    }
+
+
+.Sunny-icon { 
+    width: 20px;
+    height: 20px;
+    background-size:contain;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/4064/4064276.png");
+    background-repeat: no-repeat;
+
+}
+
+.Windy-icon{
+    width: 20px;
+    height: 20px;
+    background-size:contain; 
+    background-image: url("https://cdn-icons-png.flaticon.com/512/3026/3026375.png");
+    background-repeat: no-repeat;
+}
+
+.Rainy-icon { 
+    width: 20px;
+    height: 20px;
+    background-size:contain;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/3262/3262915.png");
+    background-repeat: no-repeat;
+
+}
+
+
+.title { font-size:50px; 
+
+}
+.temp-today{color: rgb(218, 22, 22);
+    font-size: 60px;
+}
+.bigicon-temp { float: left;
+
+}
+ .weekly-weather div{ display: inline-block;
+    
+
+}
+
+.bigicon-temp,.temp-today,.Shower-icon1,.weather-information,.weekly-weather {text-align: center;
+
+}
+
+.Weather { padding-top: 70px;
+
+}
+
+@media (min-width:375px) { .weekly-weather, .detail{ font-size: 22px;
+
+}
+
+}
+@media (min-width:500px) { .weekly-weather {font-size: 30px;}}
+
+@media (min-width:700px) {
+    .Weather {padding-top: 170px;}
+    .weekly-weather {font-size: 40px;}
+    .detail div{font-size: larger;}
+}
+
+
+
+
+
